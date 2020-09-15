@@ -1,0 +1,89 @@
+<html>
+
+<!-- loads before the body -->
+<head>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+  <link href="style.css" rel="stylesheet">
+
+  <!-- load style sheets, javascript, fonts -->
+  <style>
+    
+    /* element selector */
+    /* this one overrides the h1 defined in the style.css file */
+    h1 {
+      color:orange; /* property : value ; */
+    }
+    
+    /* class selector */
+    /* for multiple elements on a page */
+    .article-title {
+      text-transform: uppercase;
+      /* font-size: 40px; */
+    }
+
+    .section {
+      background-color: #cccccc;
+    }
+
+    /* id selector */
+    /* for a single element on a page */
+    #space-cat {
+      border: solid;
+      border-width: 10px;
+      border-color: royalblue;
+    }
+    
+  </style>
+
+</head>
+
+<!-- this is your content -->
+<body>
+
+  <h1>my awesome website</h1>
+  
+  <div class="section">
+    <h2 class="article-title"><a href="">My Space Cat!!</a></h2>
+    <p>9/14/20, by RJ</p>
+    
+    <a href="http://make.cmci.studio"><img id="space-cat" src="spacecat.jpg"></a>
+  
+    <p>Around the world around the world, around the world, around the world, around the world, around the world, around the world around the world, around the world. Around the world around the world, around the world around the world around the world around the world. Around the world around the world.</p>
+
+    <!-- unordered, bullets -->
+    <ul>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+    </ul>
+
+    <!-- ordered 1., 2. 3. etc -->
+    <ol>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+    </ol>
+    
+  </div>
+  
+  <div class="section">
+    <h2 class="article-title">article title 2</h2>
+    <p>9/14/20, by RJ</p>
+    <p>Around the world around the world, around the world, around the world, around the world, around the world, around the world around the world, around the world. Around the world around the world, around the world around the world around the world around the world. Around the world around the world.</p>
+  </div>
+  
+  <div class="section">
+    <h2 class="article-title">article title 3</h2>
+    <p>9/14/20, by RJ</p>
+    <p>Around the world around the world, around the world, around the world, around the world, around the world, around the world around the world, around the world. Around the world around the world, around the world around the world around the world around the world. Around the world around the world.</p>
+  </div>
+  
+  <foter>
+    <p>Made in Denver</p>
+  </foter>
+
+</body>
+
+</html>

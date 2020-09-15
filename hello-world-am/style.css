@@ -1,0 +1,33 @@
+/* this is a comment in css */
+
+
+/* element selector */
+body {
+  font-family: 'Source Sans Pro', sans-serif; 
+}
+
+h1 {
+  color:red;
+}
+
+
+/* class selector */
+.title {
+  color: green;       
+}
+
+.title2 {
+  color: purple;      
+}
+
+.section {
+  background-color: #EEEEEE;
+}
+
+
+/* id selector */
+#space-cat {
+  border: solid;
+  border-width: 10px;
+  border-color: blue;
+}

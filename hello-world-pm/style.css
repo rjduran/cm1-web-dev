@@ -1,0 +1,23 @@
+/* element selector */
+h1 {
+  color: #FF0000; /* property : value ; */
+}
+
+body {
+  /* font-family: 'Roboto Mono', monospace; */
+}
+
+/* class selector */
+/* for multiple elements on a page */
+.article-title {
+  text-transform: uppercase;
+  /* font-size: 40px; */
+}
+
+/* id selector */
+/* for a single element on a page */
+#space-cat {
+  border: solid;
+  border-width: 10px;
+  border-color: royalblue;
+}
