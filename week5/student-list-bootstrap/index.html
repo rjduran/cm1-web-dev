@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Student List</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Content here -->
+      <h1>Student List</h1>
+
+      <div class="input-group mb-3">        
+        <input id="filterInput" type="text" class="form-control" placeholder="Search names...">
+      </div>      
+
+      <ul id="names" class="list-group">
+        
+        <li class="list-group-item list-header">
+          <h3>A</h3>
+        </li>
+        <li class="list-group-item list-item">
+          <a href="#">Arielle</a>
+        </li>        
+
+        <li class="list-group-item list-header">
+          <h3>B</h3>
+        </li>
+        <li class="list-group-item list-item">
+          <a href="#">Bella</a>
+        </li>        
+
+        <li class="list-group-item list-header">
+          <h3>C</h3>
+        </li>
+        <li class="list-group-item list-item">
+          <a href="#">Cal</a>
+        </li>
+        <li class="list-group-item list-item">
+          <a href="#">Caleb</a>
+        </li>
+        <li class="list-group-item list-item">
+          <a href="#">Cody</a>
+        </li>
+
+        <li class="list-group-item list-header">
+          <h3>D</h3>
+        </li>
+        <li class="list-group-item list-item">
+          <a href="#">Devva</a>
+        </li>
+
+        <li class="list-group-item list-header">
+          <h3>H</h3>
+        </li>
+        <li class="list-group-item list-item">
+          <a href="#">Haley</a>
+        </li>
+        <li class="list-group-item list-item">
+          <a href="#">Heather</a>
+        </li>
+        <li class="list-group-item list-item">
+          <a href="#">Hudson</a>
+        </li>
+
+        <li class="list-group-item list-header">
+          <h3>J</h3>
+        </li>
+        <li class="list-group-item list-item">
+          <a href="#">Jacque</a>
+        </li>
+
+        <li class="list-group-item list-header">
+          <h3>K</h3>
+        </li>
+        <li class="list-group-item list-item">
+          <a href="#">Karlie</a>
+        </li>
+        <li class="list-group-item list-item">
+          <a href="#">Katie</a>
+        </li>
+
+        <li class="list-group-item list-header">
+          <h3>M</h3>
+        </li>
+        <li class="list-group-item list-item">
+          <a href="#">Mark</a>
+        </li>
+        <li class="list-group-item list-item">
+          <a href="#">Mateo</a>
+        </li>
+        <li class="list-group-item list-item">
+          <a href="#">Max</a>
+        </li>
+        <li class="list-group-item list-item">
+          <a href="#">Mye</a>
+        </li>
+
+        <li class="list-group-item list-header">
+          <h3>N</h3>
+        </li>
+        <li class="list-group-item list-item">
+          <a href="#">Natalie</a>
+        </li>
+        
+        <li class="list-group-item list-header">
+          <h3>Y</h3>
+        </li>
+        <li class="list-group-item list-item">
+          <a href="#">Yuan</a>
+        </li>
+                
+      </ul>
+              
+    </div>
+   
+    <script>
+      
+      // get a reference to the input element
+      var filterInput = document.getElementById('filterInput');
+
+      // add event listener to detect when we press a key
+      filterInput.addEventListener('keyup', filterNames);
+
+      // create a function that does the work of filtering the names in our document 
+      // and updating the list to show the name we are looking for
+      function filterNames() {
+        //console.log(1); // test to make sure function is called
+
+        // Get value of input and make it uppercase
+        var filterValue = document.getElementById('filterInput').value.toUpperCase();
+        //console.log(filterValue); // test to make sure this works
+
+        // Get names ul
+        var ul = document.getElementById('names');
+        //console.log(names); // test to make sure we get the names ul
+
+        // get li's from ul
+        // ref: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
+        var li = ul.querySelectorAll('li.list-item');
+        //console.log(li);
+
+        // loop through list-item list
+        for(var i = 0; i < li.length; i++){
+          
+          // get each item in the list to test
+          var a = li[i].getElementsByTagName('a')[0]; 
+
+          // check if there is a match by comparing the filterValue from above to the current value in the list
+          if(a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+            
+            // if there is a match, do this
+            li[i].style.display = '';
+          } else {
+            // if there is not a match, do this
+            li[i].style.display = 'none';
+          }
+
+        }
+
+      }
+
+    </script>
+  </body>
+</html>
