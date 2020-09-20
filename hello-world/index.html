@@ -30,6 +30,10 @@
       border-width: 5px;
       border-color: blue;
     }
+    #wrapper {
+      width: 50%;
+      margin: auto;
+    }
     
   </style>
 
@@ -47,23 +51,27 @@
 
 <body>
   <!-- this is where you specify your document -->
-  
-  <h1>this is a header</h1>
-  <p>this is a paragraph</p>
-  
-  <!-- this is a container -->
-  <div>
-    <h2 class="title">this is also a header</h2>
-    <p>this is another paragraph</p>
-    <a href="https://make.cmci.studio">This is a link to the class website</a>
-  </div>
+  <div id="wrapper">
+    <h1>this is a header</h1>
+    <p>this is a paragraph</p>
+    
+    <!-- this is a container -->
+    <div>
+      <h2 class="title">this is also a header</h2>
+      <p>this is another paragraph</p>
+      <a href="https://make.cmci.studio">This is a link to the class website</a>
+    </div>
 
-  <!-- this is a container -->
-  <div>
-    <h2 class="title">spacecat!</h2>
-    <p>yay spacecat!</p>
-    <img id="space-cat" src="spacecat.jpg" alt="spacecat">
-    <p id="greeting"></p>    
+    <!-- this is a container -->
+    <div>
+      <h2 class="title">spacecat!</h2>
+      <p>yay spacecat!</p>
+      <img id="space-cat" src="spacecat.jpg" alt="spacecat">
+      <p id="greeting"></p>    
+    </div>
+
+    <!-- this is a footer -->
+    <footer>Made by cats</footer>
   </div>
 
   <!-- you may also place the script tag or load in js files after the body has been read-->    
