@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hello world js</title>
+
+  <!-- internal js - before body is loaded -->
+  <!-- benefit: loading functions or data before the body in order to build a page dynamically -->
+  <script>
+    //alert("hello world");    
+    //console.log("hello this is my message");
+
+    var message = "hello this is my message";
+    var a = 1; 
+    var b = 2; 
+    var c = 2.5;
+    //var x = true; // or false // boolean
+    //var obj = {}; 
+
+    console.log(message + " " + a);
+
+  </script>
+
+</head>
+<body>
+  <h1 id="h1-item">hello world</h1>
+
+  <ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+  </ul>
+  
+  <!-- internal js - after body is loaded -->
+  <!-- benefit: manipulate the stuff in page using the DOM -->
+  <script>
+    //alert("hello world");
+
+    // get reference to h1
+    var h1ref = document.getElementById('h1-item');    
+    //console.log(h1ref);    
+
+    h1ref.innerText = "hello this is my message";
+
+  </script>
+</body>
+</html>

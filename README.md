@@ -1,6 +1,6 @@
 # cm1-web-dev
 
-This repository contains all the code used in CM1 Phase 2: The Modern Web.
+This repository contains all the code used in CM1 Phase 2: The Modern Web. The projects worked on during class will be in folders called "in-class".
 
 To Use:
 
@@ -31,5 +31,8 @@ live-server
 
 * student-list-bootstrap - Example of a filterable list using [Bootstrap](https://getbootstrap.com/) as the front-end framework.
 * student-list-materialize - Example of a filterable list using [Materialize.css](https://materializecss.com/) as the front-end framework.
+
+## week 6 examples
+
 * student-list-strapi - Examples of a filterable list using [Bootstrap](https://getbootstrap.com/) or [W3.CSS](https://www.w3schools.com/w3css/) as the front-end framework and [Strapi](https://strapi.io/) as the back-end API. _Note: Strapi server is not included in the repository. To use this example you will have to build your own Strapi database as shown in the Strapi [Quick Start Guide](https://strapi.io/documentation/v3.x/getting-started/quick-start.html)._
 * data.txt - Data file with list of names used in Strapi.

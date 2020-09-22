@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>student list</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <!-- Content here -->
+
+      <h1>student list</h1>
+
+      <div class="input-group mb-3">
+        <input type="text" placeholder="Search names..." class="form-control" id="searchField">
+      </div>      
+
+      <ul class="list-group" id="names">
+        <li class="list-group-item list-header"><h3>A</h3></li>
+        <li class="list-group-item list-item"><a href="#">Arielle</a></li>
+        <li class="list-group-item list-header"><h3>B</h3></li>
+        <li class="list-group-item list-item"><a href="#">Bella</a></li>
+        <li class="list-group-item list-header"><h3>C</h3></li>
+        <li class="list-group-item list-item"><a href="#">Cal</a></li>
+        <li class="list-group-item list-item"><a href="#">Caleb</a></li>
+      </ul>
+
+    </div>
+
+    <!-- insert javascript here -->
+    <script>
+      //console.log("hello world");
+
+      // algorithm as pseudocode:
+      // get a reference to the input element
+      var filterInput = document.getElementById('searchField');  
+
+      // add event listener for key presses
+      filterInput.addEventListener('keyup', filterNames);
+
+      // define function
+      function filterNames() {
+
+        // print out to console
+         //console.log(filterInput.value)
+
+        // filter the list
+          // get a list of names 
+          var ul = document.getElementById('names');
+          
+          // get the names within the ul
+          var li = ul.querySelectorAll('li.list-item');
+          //console.log(li);          
+
+          // Get value of input and make it uppercase
+          var filterValue = document.getElementById('searchField').value.toUpperCase();
+
+          // loop through the list
+          // perform a text comparrison
+          // update the display to show matches
+
+          // loop through list-item list
+        for(var i = 0; i < li.length; i++){
+          
+          // get each item in the list to test
+          var a = li[i].getElementsByTagName('a')[0]; 
+
+          // check if there is a match by comparing the filterValue from above to the current value in the list
+          if(a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+            
+            // if there is a match, do this
+            li[i].style.display = '';
+          } else {
+            // if there is not a match, do this
+            li[i].style.display = 'none';
+          }
+
+        }
+
+      }
+
+      
+      
+
+      
+
+
+    </script>    
+
+  </body>
+</html>
