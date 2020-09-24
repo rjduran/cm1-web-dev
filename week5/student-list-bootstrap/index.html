@@ -123,6 +123,7 @@
       
       // get a reference to the input element
       var filterInput = document.getElementById('filterInput');
+      //console.log(filterInput); //  to test that im getting reference to the input element      
 
       // add event listener to detect when we press a key
       filterInput.addEventListener('keyup', filterNames);
@@ -134,7 +135,7 @@
 
         // Get value of input and make it uppercase
         var filterValue = document.getElementById('filterInput').value.toUpperCase();
-        //console.log(filterValue); // test to make sure this works
+        //console.log(filterValue); // test for key presses and converting chatacters to uppercase
 
         // Get names ul
         var ul = document.getElementById('names');
@@ -143,22 +144,30 @@
         // get li's from ul
         // ref: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
         var li = ul.querySelectorAll('li.list-item');
-        //console.log(li);
+        //console.log(li); // test to make sure we get a list of li's with class list-item
 
-        // loop through list-item list
+        // loop through .list-item list
+        // loop over 18 items
         for(var i = 0; i < li.length; i++){
           
           // get each item in the list to test
           var a = li[i].getElementsByTagName('a')[0]; 
 
-          // check if there is a match by comparing the filterValue from above to the current value in the list
+          // Check if there is a match by comparing the filterValue from above to the current value in the list. 
+          // This uses the indexOf() function to do the compare. 
+          // ref: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
+          // Basically, if there is anything in the current anchor tag that matches the filterValue, this will 
+          // evaluate to true and show the element. Else, it will hide the item in the list. 
           if(a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
             
-            // if there is a match, do this
+            // if there is a match, show element
             li[i].style.display = '';
+
           } else {
-            // if there is not a match, do this
+            
+            // if there is not a match, hide element
             li[i].style.display = 'none';
+
           }
 
         }
