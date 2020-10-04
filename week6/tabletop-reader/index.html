@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="js/tabletop.js"></script>  
+
+  <title>Favorite Ice Cream</title>
+
+  <style>
+
+    .chocolate {
+      background-color: #4d2600;
+      color: white;
+    }
+    .peanut-butter-chocolate {
+      background-color: #994d00; 
+    }
+    .strawberry {
+      background-color: pink;
+    }
+    .salted-oreo {
+      background-color: #cccccc;
+    }
+    .vanilla {
+      background-color: #FCF2D8;
+    }
+    .orange {
+      background-color: orange;
+    }
+    .coffee {
+      background-color: #4d2600;
+      color: orange;
+    }
+
+  </style>
+
+</head>
+<body>
+  <h1>Favorite Ice Cream</h1>  
+  
+  <!-- display the contents of the database -->
+  <ul id="favorites"></ul>
+  
+  <!-- load script -->
+  <script>
+        
+    // favorite ice cream form (public)
+    // Add your response to this form:
+    // https://docs.google.com/forms/d/e/1FAIpQLSdkBGP60Z7kO_pK4Ta_QIEh1TYTcNw1kBUO8ucCUZtcMA_r6Q/viewform?usp=sf_link
+
+    // favorite ice cream responses (public)
+    // https://docs.google.com/spreadsheets/d/1tmmHZzmCYGwXLe0WLDPhTVP75-TPWxZqXiIdHo99K9g/edit?usp=sharing
+
+    // initialize interface to api
+    // handshaking between systems
+    // authentication of user
+    // ready to receive data by sending requests
+    
+    // sends GET requests
+    function init() {
+      //console.log("loaded");
+      Tabletop.init({ 
+        key: 'https://docs.google.com/spreadsheets/d/1tmmHZzmCYGwXLe0WLDPhTVP75-TPWxZqXiIdHo99K9g/edit?usp=sharing',
+        callback: gotData,
+        simpleSheet: true });      
+    }
+    
+    window.addEventListener('DOMContentLoaded',init);
+    
+    // parses data
+
+    function gotData(data) {
+      // print out the data. I get an array of objects.
+      console.log(data);
+      
+      // lets get the first object and display it as a list
+      var obj = data[0];
+      //console.log(obj);
+
+      var ul = document.getElementById('favorites');
+      
+      // loop through all the items in the data and display them in a list
+      for(var i = 0; i < data.length; i++){
+        var li = document.createElement('li');
+        li.className = 'flavor-item';
+
+        // get flavor, change to lower case, replace spaces with dshes, use as the class for the span
+        // with the purpose of adding a background color to the text displayed
+        var className = data[i].Flavor.toLowerCase().replace(/\s+/g, '-');
+
+        // suggested improvement:
+        // take the flavor term
+        // send it to a NLP tool / API
+        // get back flavor name with high confidence
+
+        var phrase = data[i].Name + " likes <span class='" + className + "'>" + data[i].Flavor + "</span>";
+        li.innerHTML = phrase;
+        //console.log(li);
+
+        ul.appendChild(li);
+      }
+      
+    }
+
+  </script>
+  
+</body>
+</html>

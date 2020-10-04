@@ -32,5 +32,16 @@ live-server
 
 ## week 6 examples
 
+Strapi as API
+
+This example uses a custom built database in Strapi to serve JSON data through API. The data entered into the database can be found in data.txt. 
+
 * student-list-strapi - Examples of a filterable list using [Bootstrap](https://getbootstrap.com/) or [W3.CSS](https://www.w3schools.com/w3css/) as the front-end framework and [Strapi](https://strapi.io/) as the back-end API. _Note: Strapi server is not included in the repository. To use this example you will have to build your own Strapi database as shown in the Strapi [Quick Start Guide](https://strapi.io/documentation/v3.x/getting-started/quick-start.html). Pay special attention to the field names you use since they are used in the Javascript (for example, firstname)._
-* data.txt - Data file with list of names used in Strapi.
+  
+Google Sheets API
+
+These examples use helper libraries to make it easier to setup a connection between a website or web app and a Google Sheet via API. Both of these methods are READ only. There isn't WRITE access. To have WRITE access to a Google Sheet you have to use the full Google Sheets API. Also, tabletop.js looks to be in transition due to changes in the Google Sheets API. It currently still works as described but that may change in the future. 
+
+* Google Sheets Reader - Free / Open Source, Requires Node.js
+* Tabletop.js - Free / Open Source
+
