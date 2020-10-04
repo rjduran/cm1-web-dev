@@ -42,6 +42,5 @@ Google Sheets API
 
 These examples use helper libraries to make it easier to setup a connection between a website or web app and a Google Sheet via API. Both of these methods are READ only. There isn't WRITE access. To have WRITE access to a Google Sheet you have to use the full Google Sheets API. Also, tabletop.js looks to be in transition due to changes in the Google Sheets API. It currently still works as described but that may change in the future. 
 
-* Google Sheets Reader - Free / Open Source, Requires Node.js
-* Tabletop.js - Free / Open Source
-
+* [Google Sheets Reader](https://github.com/bpk68/g-sheets-api) - Free / Open Source, Requires Node.js
+* [Tabletop.js](https://github.com/jsoma/tabletop) - Free / Open Source
